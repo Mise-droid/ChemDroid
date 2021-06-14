@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgchem4"
+    tools:context=".ChemCalculator">
+
+    <EditText
+        android:id="@+id/editSymbol"
+        android:layout_width="249dp"
+        android:layout_height="57dp"
+        android:ems="10"
+        android:hint="Type an element/compound"
+        android:inputType="textPersonName"
+        android:textColor="@color/white"
+        android:textColorHighlight="#FFFFFF"
+        android:textColorHint="#ECCDCD"
+        android:textColorLink="#ECCDCD"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.305" />
+
+    <Button
+        android:id="@+id/calcBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="btnCalc"
+        android:text="Calculate"
+        app:backgroundTint="#DC4040"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editSymbol"
+        app:layout_constraintVertical_bias="0.438" />
+
+    <Button
+        android:id="@+id/backOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
+        android:onClick="btnBack"
+        android:text="Back to Main Menu"
+        app:backgroundTint="#DC4040"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calcBtn"
+        app:layout_constraintVertical_bias="0.085" />
+
+    <TextView
+        android:id="@+id/textResult"
+        android:layout_width="225dp"
+        android:layout_height="60dp"
+        android:hint="Result:"
+        android:textColor="@color/white"
+        android:textColorHint="#ECCDCD"
+        android:textColorLink="#ECCDCD"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/calcBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editSymbol"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/img2"
+        android:layout_width="160dp"
+        android:layout_height="145dp"
+        app:layout_constraintBottom_toTopOf="@+id/editSymbol"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.672"
+        app:srcCompat="@drawable/cheme" />
+</androidx.constraintlayout.widget.ConstraintLayout>
